@@ -1,25 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Christopher Nagy</title>
+        <link rel="stylesheet" href="styles/bulma.min.css" />
+        <script src="scripts/navbar.js"></script>
+        <script
+            src="https://kit.fontawesome.com/503fd82dc5.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Christopher Nagy's Portfolio</title>
     </head>
     <body>
-        <header>
-            <h1>Hi, I'm Christopher Nagy</h1>
-        </header>
+        <nav
+            class="navbar is-fixed-top"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="navbar-brand">
+                <a
+                    role="button"
+                    class="navbar-burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                    data-target="navbar"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#hero"> Home </a>
+                    <a class="navbar-item" href="#about"> About </a>
+                    <a class="navbar-item" href="#work"> Work </a>
+                    <a class="navbar-item" href="#projects"> Projects </a>
+                    <a class="navbar-item" href="#contact"> Contact </a>
+                </div>
 
-        <nav>
-            <!-- Add your navigation links here -->
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a
+                                class="button is-primary"
+                                href="public/christopher-nagy-resume.pdf"
+                                download="christopher-nagy-resume.pdf"
+                            >
+                                Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <main>
-            <!-- Add your content here -->
+            <section class="hero container" id="hero">
+                <div class="hero-body">
+                    <p>Hi, my name is</p>
+                    <p class="title my-2 is-size-1">Christopher Nagy.</p>
+                    <p>
+                        I love to build user-friendly and efficient applications
+                        that solve relevant problems and aim to make our world a
+                        better place.
+                    </p>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="section" id="about">
+                    <h1 class="title">About Me</h1>
+                    <p>
+                        I am a software engineer with a passion for building
+                        applications that solve real-world problems. I have
+                        experience in full-stack development, and I am always
+                        looking to learn new technologies and improve my skills.
+                    </p>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="section" id="work">
+                    <h1 class="title">Work Experience</h1>
+                    <div class="content">
+                        <h2 class="subtitle">Software Engineer</h2>
+                        <p class="is-italic">Company Name, Location</p>
+                        <p>May 2020 - Present</p>
+                        <ul>
+                            <li>
+                                Developed and maintained web applications using
+                                React, Node.js, and MongoDB.
+                            </li>
+                            <li>
+                                Collaborated with a team of developers to
+                                implement new features and fix bugs.
+                            </li>
+                            <li>
+                                Worked with product managers to define
+                                requirements and deliver high-quality software.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="section" id="projects">
+                    <h1 class="title">Projects</h1>
+                    <div class="content">
+                        <h2 class="subtitle">Project Name</h2>
+                        <p class="is-italic">May 2020 - Present</p>
+                        <p>
+                            Description of the project. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit. Sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <ul>
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="section" id="contact">
+                    <h1 class="title">Contact</h1>
+                    <div class="content">
+                        <p>
+                            You have a question or would like to collaborate?
+                            <br />
+                            I am excited to hear from you!
+                        </p>
+                        <div class="level">
+                            <div class="level-left">
+                                <a
+                                    class="button"
+                                    href="mailto:christopher_nagy@icloud.com"
+                                >
+                                    <span class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </a>
+                                <a
+                                    class="button"
+                                    href="https://www.linkedin.com/in/nagychristopher"
+                                    target="_blank"
+                                >
+                                    <span class="icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer>
-            <!-- Add your footer content here -->
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    © 2024 created with 🧡 and
+                    <a href="https://www.bulma.io" target="_blank">Bulma</a> by
+                    Christopher Nagy. All rights reserved.
+                </p>
+            </div>
         </footer>
     </body>
 </html>
