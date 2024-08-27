@@ -1,20 +1,27 @@
+// source adapted from https://bulma.io/documentation/components/navbar/
 document.addEventListener('DOMContentLoaded', () => {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-        document.querySelectorAll('.navbar-burger'),
-        0
-    );
+    // Get "navbar-burger" element
+    const $navbarBurgers = document.querySelectorAll('.navbar-burger');
+    const navbarBurgerEl = $navbarBurgers[0];
+    // Get "navbar-menu" element from the "data-target" attribute
+    const target = navbarBurgerEl.dataset.target;
+    const navbarMenuEl = document.getElementById(target);
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach((el) => {
+    navbarBurgerEl.addEventListener('click', () => {
+        toggleNavBar(navbarBurgerEl, navbarMenuEl);
+    });
+
+    // Get all "navbar-item" elements and toggle navBar on click
+    const $navbarLinks = document.querySelectorAll('.navbar-item');
+    $navbarLinks.forEach((el) => {
         el.addEventListener('click', () => {
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
+            toggleNavBar(navbarBurgerEl, navbarMenuEl);
         });
     });
 });
+
+const toggleNavBar = (navbarBurgerEl, navbarMenuEl) => {
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    navbarBurgerEl.classList.toggle('is-active');
+    navbarMenuEl.classList.toggle('is-active');
+};

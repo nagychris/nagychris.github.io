@@ -1,0 +1,13 @@
+/* Theme Colors Overrides */
+/* --------------------- */
+:root {
+    /* Primary: #E76F51 */
+    --bulma-primary-h: 16deg;
+    --bulma-primary-s: 72%;
+    --bulma-primary-l: 58%;
+
+    /* Link: #219EBC */
+    --bulma-link-h: 195deg;
+    --bulma-link-s: 100%;
+    --bulma-link-l: 47%;
+}

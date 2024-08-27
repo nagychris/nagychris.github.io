@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
         <link rel="stylesheet" href="styles/bulma.min.css" />
+        <link rel="stylesheet" href="styles/theme.css" />
+        <link rel="stylesheet" href="styles/main.css" />
         <script src="scripts/navbar.js"></script>
-        <script
-            src="https://kit.fontawesome.com/503fd82dc5.js"
-            crossorigin="anonymous"
-        ></script>
         <title>Christopher Nagy's Portfolio</title>
     </head>
     <body>
@@ -33,7 +35,7 @@
             </div>
             <div id="navbar" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="#hero"> Home </a>
+                    <a class="navbar-item" href="#"> Home </a>
                     <a class="navbar-item" href="#about"> About </a>
                     <a class="navbar-item" href="#work"> Work </a>
                     <a class="navbar-item" href="#projects"> Projects </a>
@@ -44,11 +46,16 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <a
-                                class="button is-primary"
+                                class="button is-light"
                                 href="public/christopher-nagy-resume.pdf"
                                 download="christopher-nagy-resume.pdf"
                             >
-                                Resume
+                                <span class="icon-text">
+                                    <span class="icon">
+                                        <i class="bi bi-download"></i>
+                                    </span>
+                                    <span>Resume</span>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -57,26 +64,86 @@
         </nav>
 
         <main>
-            <section class="hero container" id="hero">
+            <section class="hero is-fullheight">
                 <div class="hero-body">
-                    <p>Hi, my name is</p>
-                    <p class="title my-2 is-size-1">Christopher Nagy.</p>
-                    <p>
-                        I love to build user-friendly and efficient applications
-                        that solve relevant problems and aim to make our world a
-                        better place.
-                    </p>
+                    <div class="container is-max-tablet animate appear">
+                        <p>Hi, my name is</p>
+                        <p
+                            class="title my-1 py-1 is-size-1-tablet gradient-color animate appear delay-2"
+                        >
+                            Christopher Nagy.
+                        </p>
+                        <p class="mb-3">
+                            I love to build minimalistic software, while
+                            maximizing its positive impact.
+                        </p>
+                        <a
+                            class="button is-light"
+                            href="mailto:christopher_nagy@icloud.com"
+                        >
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="bi bi-send-fill"></i>
+                                </span>
+                                <span>Contact me</span>
+                            </span>
+                        </a>
+                        <a
+                            class="button is-white"
+                            href="https://linkedin.com/in/nagychristopher"
+                            target="_blank"
+                        >
+                            <span class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </span>
+                        </a>
+                        <a
+                            class="button is-white"
+                            href="https://github.com/nagychris"
+                            target="_blank"
+                        >
+                            <span class="icon">
+                                <i class="bi bi-github"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </section>
 
             <section class="container">
                 <div class="section" id="about">
                     <h1 class="title">About Me</h1>
+                    <figure class="image is-128x128">
+                        <img
+                            class="is-rounded"
+                            src="public/christopher-photo.png"
+                        />
+                    </figure>
+                    <p class="mb-3">
+                        I am a passionate software engineer who loves building
+                        user-friendly applications that solve real-world
+                        problems. I am experienced in designing, developing, and
+                        testing robust and efficient web applications, which I
+                        prove during my M.Sc. Applied Computer Science degree,
+                        and my jobs as a working student at different companies.
+                        I love to work in small teams, where I can contribute
+                        directly to the outcome of the project and have a deep
+                        impact.
+                    </p>
+                    <p class="mb-3">
+                        If I'm not currently being productive on my laptop, I
+                        like to play sports 🏀, do yoga 🧘, or read books 📚.
+                    </p>
                     <p>
-                        I am a software engineer with a passion for building
-                        applications that solve real-world problems. I have
-                        experience in full-stack development, and I am always
-                        looking to learn new technologies and improve my skills.
+                        I am most proficient with technologies like VueJS,
+                        TypeScript, HTML/CSS, Kotlin, Java, Spring Boot, Docker,
+                        Kubernetes, GCP, ...
+                    </p>
+                    <p>
+                        However, I do not limit myself to a specific stack or
+                        language. My eagerness to learn and my ability to
+                        transfer my knowledge to new technologies and concepts
+                        have always determined my success.
                     </p>
                 </div>
             </section>
@@ -85,9 +152,9 @@
                 <div class="section" id="work">
                     <h1 class="title">Work Experience</h1>
                     <div class="content">
-                        <h2 class="subtitle">Software Engineer</h2>
-                        <p class="is-italic">Company Name, Location</p>
-                        <p>May 2020 - Present</p>
+                        <span>Software Engineer @ Lion5</span>
+                        <span>Bamberg</span>
+                        <p class="is-mono">May 2020 - Present</p>
                         <ul>
                             <li>
                                 Developed and maintained web applications using
@@ -135,27 +202,35 @@
                             <br />
                             I am excited to hear from you!
                         </p>
-                        <div class="level">
-                            <div class="level-left">
-                                <a
-                                    class="button"
-                                    href="mailto:christopher_nagy@icloud.com"
-                                >
-                                    <span class="icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                </a>
-                                <a
-                                    class="button"
-                                    href="https://www.linkedin.com/in/nagychristopher"
-                                    target="_blank"
-                                >
-                                    <span class="icon">
-                                        <i class="fab fa-linkedin"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                        <a
+                            class="button is-light"
+                            href="mailto:christopher_nagy@icloud.com"
+                        >
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="bi bi-send-fill"></i>
+                                </span>
+                                <span>Contact me</span>
+                            </span>
+                        </a>
+                        <a
+                            class="button is-white"
+                            href="https://linkedin.com/in/nagychristopher"
+                            target="_blank"
+                        >
+                            <span class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </span>
+                        </a>
+                        <a
+                            class="button is-white"
+                            href="https://github.com/nagychris"
+                            target="_blank"
+                        >
+                            <span class="icon">
+                                <i class="bi bi-github"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -166,7 +241,9 @@
                 <p>
                     © 2024 created with 🧡 and
                     <a href="https://www.bulma.io" target="_blank">Bulma</a> by
-                    Christopher Nagy. All rights reserved.
+                    Christopher Nagy. Icons from
+                    <a href="https://icons.getbootstrap.com">Bootstrap Icons</a
+                    >.
                 </p>
             </div>
         </footer>

@@ -1,0 +1,35 @@
+/* Custom CSS */
+* {
+    scroll-behavior: smooth;
+}
+
+.gradient-color {
+    background: -webkit-linear-gradient(45deg, var(--bulma-primary), var(--bulma-link));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* make navbar links centered */
+.navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.button {
+    font-weight: 300;
+}
+
+.animate.appear {
+    animation-duration: 0.5s;
+    animation-name: animate-appear;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  }
+  
+  @keyframes animate-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
