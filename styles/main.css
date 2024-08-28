@@ -1,0 +1,60 @@
+/* ---------------- */
+/*    CUSTOM CSS    */
+/* ---------------- */
+* {
+    scroll-behavior: smooth;
+}
+
+.gradient-color {
+    background: -webkit-linear-gradient(45deg, var(--bulma-primary), var(--bulma-link));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animate.appear {
+    animation-duration: 0.8s;
+    animation-name: animate-appear;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+}
+  
+@keyframes animate-appear {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+ul > li {
+    padding-left: 1em;
+    margin-bottom: 0.5rem;
+}
+
+li::before {
+    content: ">";
+    color: var(--bulma-link);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+a:hover {
+    color: var(--bulma-link-dark);
+}
+
+/* ---------------- */
+/* BULMA OVERRIDES */
+/* ---------------- */
+
+/* make navbar links centered */
+.navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.button {
+    font-weight: 300;
+}
+
